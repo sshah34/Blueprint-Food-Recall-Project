@@ -36,20 +36,25 @@ export interface Recall { //export allows other files to access the blueprint we
   allergens: string[];
 }
 
-export interface DailyFoodRecallApiItem { //this is how the fields are defined for each recall item on the dailyFoodRecalls API site
+// Describes one recall as received from Daily Food Recalls
+export interface DailyFoodRecallApiItem {
   id: string;
-  product: string;
-  brand: string;
-  category: string;
-  class: 1 | 2 | 3;
+  product?: string | null;
+  brand?: string | null;
+
   agency: "FDA" | "USDA";
-  hazard: string;
-  reason: string;
-  whatToDo: string;
-  allergens: string[];
-  affectedStates: string[];
-  officialUrl: string;
-  recallInitiated: string;
+  category?: string | null;
+  class?: 1 | 2 | 3 | null;
+
+  hazard?: string | null;
+  reason?: string | null;
+  whatToDo?: string | null;
+
+  allergens?: string[] | null;
+  affectedStates?: string[] | null;
+
+  officialUrl?: string | null;
+  recallInitiated?: string | null;
 }
 //because DailyFoodRecalls site pulls data from both FDA and USDA we don't need a second API for more info
 
@@ -60,4 +65,14 @@ export interface DailyFoodRecallsApiResponse {
   count: number;
   attribution: string;
   recalls: DailyFoodRecallApiItem[];
+}
+
+export interface RecallInsights {
+    totalRecalls: number;
+    fdaRecalls: number;
+    usdaRecalls: number;
+    class1Recalls: number;
+    class2Recalls: number;
+    class3Recalls: number;
+    categoryCounts: Record<string, number>;
 }
