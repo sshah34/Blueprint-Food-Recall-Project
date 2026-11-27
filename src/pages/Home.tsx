@@ -14,7 +14,7 @@ function Home() {
   <header className = "header-1">
     <h1 className = "header-title">Food Recall Detective</h1>
     <p className = "header-description">Learn about recent food recalls on products that matter to you.</p>
-    <img className = "header-image" src= 
+    <img className = "header-image" src= "fresh-foods.jpg"></img>
   </header>
 
   <section className = "section-1" id = "updates">
