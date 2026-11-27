@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-  <nav aria-label="Main Navigation">
+  <nav className = "home-nav" aria-label="Main Navigation">
     <Link to = "/">Home</Link>
     <Link to = "/discover">Discover</Link>
     <Link to = "/watchlist">Watchlist</Link>
     <Link to = "/explore">Explore</Link>
   </nav>
       
-  <header>
+  <header className = "header-1">
     <h1>Food Recall Tracker</h1>
     <p>Learn about recent food recalls on products that matter to you.</p>
-    <img src= 
+    <img className = "header-image" src= 
   </header>
 
-  <section id = "updates">
+  <section className = "section-1" id = "updates">
     <h2>Get Updates to Your Email</h2>
     <p>Sign up to receive food recall updates and important safety information.</p>
     <form className="updates-form" aria-describedby="form-note"
@@ -39,7 +39,7 @@ function Home() {
           placeholder="you@example.com" 
           autoComplete="email" required
           />
-        <button type="submit">Submit</button>
+        <button className = "submit-button" type="submit">Submit</button>
       </form>
   </section>
 
