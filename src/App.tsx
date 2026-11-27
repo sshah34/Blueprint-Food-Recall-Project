@@ -7,13 +7,17 @@ function App() {
   return (
     <BrowserRouter>
       <nav style={{ display: "flex", gap: "1.5rem", padding: "1rem" }}>
+        <NavLink to="/home">Home</NavLink>
         <NavLink to="/discover">Discover</NavLink>
         <NavLink to="/watchlist">Watchlist</NavLink>
+        <NavLink to="/explore">Explore</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<Navigate to="/discover" replace />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/discover" element={<Discover />} />
         <Route path="/watchlist" element={<Watchlist />} />
+        <Route path="/explore" element={<Explore />} />
       </Routes>
     </BrowserRouter>
   );
