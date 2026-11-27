@@ -12,8 +12,8 @@ function Home() {
   </nav>
       
   <header className = "header-1">
-    <h1>Food Recall Tracker</h1>
-    <p>Learn about recent food recalls on products that matter to you.</p>
+    <h1 className = "header-title">Food Recall Tracker</h1>
+    <p className = "header-description">Learn about recent food recalls on products that matter to you.</p>
     <img className = "header-image" src= 
   </header>
 
@@ -44,7 +44,7 @@ function Home() {
       </form>
   </section>
 
-  <footer>Food Recall Tracker</footer>
+  <footer className = "footer">Food Recall Tracker</footer>
     </>
     );
 }
