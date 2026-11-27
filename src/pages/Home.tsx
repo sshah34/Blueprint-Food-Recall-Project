@@ -26,12 +26,24 @@ function Home() {
       }}
       >
         <label htmlFor="name">Name</label>
-        <input id="name" type="text" placeholder="Your name" autoComplete="name" required/>
+        <input 
+          id="name" 
+          type="text" 
+          placeholder="Your Name" 
+          autoComplete="name" required
+          />
         <label htmlFor="email">Email</label>
-        <input id="email" type="email" placeholder="you@example.com" autoComplete="email" required/>
+        <input 
+          id="email" 
+          type="email" 
+          placeholder="you@example.com" 
+          autoComplete="email" required
+          />
         <button type="submit">Submit</button>
       </form>
   </section>
+
+  <footer>Food Recall Tracker</footer>
     </>
     );
 }
