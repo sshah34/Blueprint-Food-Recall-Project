@@ -60,7 +60,7 @@ function Explore() {
           <label htmlFor="food-category">Food Category</label>
           <select id="food-category"
             value={selectedCategory}
-            onChange{(event) => setSelectedCategory(event.target.value)}
+            onChange={(event) => setSelectedCategory(event.target.value)}
             >
             <option value="">All Categories</option>
             <option value="dairy">Dairy</option>
@@ -75,7 +75,7 @@ function Explore() {
           <label htmlFor="allergens">Allergens</label>
           <select id="allergens"
             value={selectedAllergen}
-            onChange{(event) => setSelectedAllergen(event.target.value)}
+            onChange={(event) => setSelectedAllergen(event.target.value)}
             >
             <option value="">All Allergens</option>
             <option value="milk">Milk</option>
@@ -112,14 +112,14 @@ function Explore() {
                   <h3>{recall.product}</h3>
                   <p><strong>Brand:</strong> {recall.brand}</p>
                   <p><strong>Reason for recall:</strong> {recall.reason}</p>
-                  <p><strong>Harzard:</strong> {recall.hazard}</p>
+                  <p><strong>Hazard:</strong> {recall.hazard}</p>
                   <p><strong>Category:</strong> {recall.categories.join(", ")}</p>
-                  <p><strong>Allergen:</strong> recall.allergens.join(", ")}</p>
+                  <p><strong>Allergen:</strong> {recall.allergens.join(", ")}</p>
                   <p><strong>Classification:</strong> {recall.classification}</p>
                   <p><strong>Recall Date:</strong> {recall.recallDate}</p>
-                  <a href={recall.sourceUrl} target="_blank">View Official Recall</a>
+                  <a href={recall.sourceUrl} target="_blank" rel="noreferrer">View Official Recall</a>
                 </article>  
-                ))};
+                ))}
         </div> 
       </section>
     </main>
