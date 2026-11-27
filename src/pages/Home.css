@@ -1,1 +1,82 @@
+.home-nav {
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center; 
+  gap: 2rem;
+  padding: 1.25rem 2rem;
+  background-color: #234936; 
+}
 
+  .home-nav a {
+    color: white; 
+    font: 18px 'Open Sans';
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .home-nav a:hover {
+    color: #819c8a;
+  }
+
+  .header-1 {
+    text-align: center;
+  }
+
+  .header-title {
+    color: #234936;
+    font: 24px 'Open Sans';
+  }
+
+  .header-description {
+    color: white;
+    font: 20px 'Open Sans';
+  }
+
+  .header-image {
+    
+  }
+
+  .section-1 {
+    text-align: center;
+    color: white;
+    font: 18px 'Open Sans';
+  }
+
+  .submit-button {
+    background-color: #234936;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font: 18px 'Open Sans';
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .updates-form label {
+    color: white;
+    font: 18px 'Open Sans';
+    margin-bottom: 0.5rem;
+  }
+
+  .updates-form input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: white;
+    font: 18px 'Open Sans';
+    box-sizing: border-box;
+  }
+
+  .submit-button:hover {
+    color: #194728
+  }
+
+  .footer {
+    text-align: center;
+    color: white;
+    font: 12px 'Open Sans';
+  }
