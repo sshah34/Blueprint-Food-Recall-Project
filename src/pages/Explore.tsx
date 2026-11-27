@@ -1,7 +1,25 @@
-import 
+import { useState } from "react";
+import { useRecalls } from "../hooks/useRecalls";
 
-
+//setting and storing what the user inputs
 function Explore() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedAllergen, setSelectedAllergen] = useState("");
+  const [selectedClassification, setSelectedClassification] = useState("");
+
+//passing the user input into recalls hook
+  const {
+    filteredRecalls,
+    loading,
+    error
+  } = useRecalls (
+    searchTerm,
+    selectedCategory,
+    selectedAllergen,
+    selectedClassification
+  );
+  
   return (
     <>
 
@@ -15,13 +33,14 @@ function Explore() {
         <h2 className = "next-header">Search for a recall</h2>
 
         <form className = "search-bar"
-          //insert functionality
+          onSubmit={(event) => event.preventDefault()}
         >
           <input 
             type="text"
             placeholder="Search by product, brand, or keyword..."
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
           />
-
           <button className = "submit-button" type="submit">Submit</button>
         </form>
       </section>
