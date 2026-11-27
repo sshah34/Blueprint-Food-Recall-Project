@@ -20,6 +20,7 @@
 
   .header-1 {
     text-align: center;
+    background-color: black;
   }
 
   .header-title {
@@ -33,13 +34,20 @@
   }
 
   .header-image {
-    
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border: 10px solid black;
+    box-sizing: border-box;
   }
 
   .section-1 {
     text-align: center;
     color: white;
     font: 18px 'Open Sans';
+    background-color: black;
   }
 
   .submit-button {
@@ -72,7 +80,7 @@
   }
 
   .submit-button:hover {
-    color: #194728
+    background-color: #194728
   }
 
   .footer {
