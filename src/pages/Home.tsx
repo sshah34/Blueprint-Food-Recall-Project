@@ -44,7 +44,7 @@ function Home() {
       </form>
   </section>
 
-  <footer className = "footer">Food Recall Tracker</footer>
+  <footer className = "footer">Food Recall Detective</footer>
     </>
     );
 }
