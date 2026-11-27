@@ -19,6 +19,14 @@ function Explore() {
     selectedAllergen,
     selectedClassification
   );
+
+  if (loading) {
+    return <p className="loading">Loading food recalls...</p>;
+  }
+
+  if (error) {
+    return <p className="error">Error: {error}</p>
+  }
   
   return (
     <>
@@ -98,7 +106,10 @@ function Explore() {
 
         <div className="recalls">
           <article className="recall-cards">
-            //add functionality
+            {filteredRecalls.length === 0 ?
+              (<p className="nothing-found">No matching food recalls found.</p>)
+              : (
+            
             <h3>Example Food Product</h3>
             <p><strong>Brand:</strong>Example Brand</p>
             <p><strong>Reason for recall:</strong>Insert reason here</p>
