@@ -50,7 +50,10 @@ function Explore() {
 
         <div className = "filter-box">
           <label htmlFor="food-category">Food Category</label>
-          <select id="food-category">
+          <select id="food-category"
+            value={selectedCategory}
+            onChange{(event) => setSelectedCategory(event.target.value)}
+            >
             <option value="">All Categories</option>
             <option value="dairy">Dairy</option>
             <option value="seafood">Seafood</option>
@@ -62,7 +65,10 @@ function Explore() {
 
         <div className="filter-box">
           <label htmlFor="allergens">Allergens</label>
-          <select id="allergens">
+          <select id="allergens"
+            value={selectedAllergen}
+            onChange{(event) => setSelectedAllergen(event.target.value)}
+            >
             <option value="">All Allergens</option>
             <option value="milk">Milk</option>
             <option value="peanuts">Peanuts</option>
@@ -75,7 +81,10 @@ function Explore() {
 
         <div className="filter-box">
           <label htmlFor="recall-classifications">Recall Classification</label>
-          <select id="recall-classifications">
+          <select id="recall-classifications"
+            value={selectedClassification}
+            onChange={(event) => setSelectedClassification(event.target.value)}
+            >
             <option value="">All Classifications</option>
             <option value="class-i">Class I</option>
             <option value="class-ii">Class II</option>
