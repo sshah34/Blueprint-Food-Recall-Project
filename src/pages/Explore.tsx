@@ -105,19 +105,21 @@ function Explore() {
         <h2 className="recall-header">Recent Food Recalls</h2>
 
         <div className="recalls">
-          <article className="recall-cards">
             {filteredRecalls.length === 0 ?
               (<p className="nothing-found">No matching food recalls found.</p>)
-              : (
-            
-            <h3>Example Food Product</h3>
-            <p><strong>Brand:</strong>Example Brand</p>
-            <p><strong>Reason for recall:</strong>Insert reason here</p>
-            <p><strong>Category:</strong>Category</p>
-            <p><strong>Allergen:</strong>Allergen</p>
-            <p><strong>Classification:</strong>Classification</p>
-            <p><strong>Recall Date:</strong>month-day-year</p>
-          </article>  
+              : (filteredRecalls.map((recall) => 
+                <article className="recall-cards" key={recall.id}>
+                  <h3>{recall.product}</h3>
+                  <p><strong>Brand:</strong> {recall.brand}</p>
+                  <p><strong>Reason for recall:</strong> {recall.reason}</p>
+                  <p><strong>Harzard:</strong> {recall.hazard}</p>
+                  <p><strong>Category:</strong> {recall.categories.join(", ")}</p>
+                  <p><strong>Allergen:</strong> recall.allergens.join(", ")}</p>
+                  <p><strong>Classification:</strong> {recall.classification}</p>
+                  <p><strong>Recall Date:</strong> {recall.recallDate}</p>
+                  <a href={recall.sourceUrl} target="_blank">View Official Recall</a>
+                </article>  
+                ))};
         </div> 
       </section>
     </main>
