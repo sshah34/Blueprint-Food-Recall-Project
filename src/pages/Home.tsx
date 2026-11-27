@@ -4,12 +4,6 @@ import "./Home.css";
 function Home() {
   return (
     <>
-  <nav className = "home-nav" aria-label="Main Navigation">
-    <Link to = "/">Home</Link>
-    <Link to = "/discover">Discover</Link>
-    <Link to = "/watchlist">Watchlist</Link>
-    <Link to = "/explore">Explore</Link>
-  </nav>
       
   <header className = "header-1">
     <h1 className = "header-title">Food Recall Detective</h1>
